@@ -1,0 +1,271 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
+
+}
+
+.material-symbols-outlined {
+    color: rgb(96, 96, 96);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    padding: 15px;
+
+
+}
+
+.header__left {
+    display: flex;
+    align-items: center;
+    display: block;
+
+}
+.header__left img {
+    width: 100px;
+    margin-left: 5px;
+    margin-bottom: 14px;
+}
+
+.header__icons .material-symbols-outlined {
+    display: block;
+}
+
+.header__icons {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 12px;
+}
+
+.header i {
+    padding: 0px 7px;
+    cursor: pointer;
+}
+
+.header__search form {
+    border: 1px solid #ddd;
+    height: 35px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+   
+}
+
+.header__search input {
+    width: 500px;
+    margin: 0;
+    padding: 10px;
+    border-radius: 0;
+    border: none;
+}
+
+.header__search button {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    border: none;
+    border-radius: 0;
+}
+
+.mainbody {
+    height: calc(100vh - 70px);
+    display: flex;
+    overflow: hidden;
+
+}
+
+.sidebar {
+    height: 100%;
+    width: 270px;
+    background-color: white;
+    overflow-y: scroll;
+    display: block;
+
+}
+
+.sidebarcategories {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    margin-top: 15px;
+
+}
+
+.sidebarcategory {
+    display: flex;
+    align-items: center;
+    padding: 10px 25px;
+}
+
+.sidebarcategory span {
+    margin-left: 15px;
+}
+
+.sidebarcategory:hover {
+    border-radius: 8px;
+    background-color: #e5e5e5;
+    cursor: pointer;
+}
+
+.sidebar::-webkit-scrollbar {
+    display: none;
+}
+
+hr {
+    height: 1px;
+    background-color: #fbf7f7;
+    border: none;
+}
+
+.videos {
+    background-color:white;
+    width: 100%;
+    height: 100%;
+    padding: 15px 25px;
+    border-top: 1px solid #ddd;
+    overflow-y: scroll;
+
+
+}
+
+.videos-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.video {
+    width: 320px;
+
+    margin-bottom: 30px;
+}
+
+.video-thambnail {
+    width: 100%;
+    height: 170px;
+}
+
+.video-thambnail img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.video-thambnail img:hover{
+    border-radius: 0px;
+}
+.author img {
+    object-fit: cover;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+
+
+}
+
+.video-details {
+    display: flex;
+    margin-top: 10px;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+}
+
+.title h3 {
+    color: rgb(4, 4, 4);
+    line-height: 18px;
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+
+.title a,
+span {
+    text-decoration: none;
+    color: rgb(96, 96, 96);
+    font-size: 14px;
+}
+
+.responsive {
+    display: none;
+}
+
+
+@media screen and (max-width:425px) {
+    .header__search {
+        display: none;
+    }
+
+    .header__icons .material-symbols-outlined {
+        display: none;
+    }
+
+    .header__icons .display-this {
+        display: inline;
+    }
+
+
+    .sidebar {
+        display: none;
+      
+    }
+    
+}
+
+@media screen and (max-width:768px) {
+    .header__search {
+        display: none;
+    }
+
+    .sidebar {
+        display: none;
+    }
+    
+}
+
+
+@media screen and (max-width:1005px) {
+
+    .header__search input {
+        width: 300px;
+        margin: 0;
+        padding: 10px;
+        border-radius: 0;
+        border: none;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .show-sidebar{
+        display: inline !important;
+        position: fixed;
+       
+        width: 210px;
+    }
+  
+}
+
+@media screen and (min-width:770px) and (max-width:1550px){
+    
+    .header__icons .cutlast {
+        display: none;
+    }
+}
