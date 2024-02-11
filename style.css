@@ -215,7 +215,6 @@ span {
     display: none;
 }
 
-
 @media screen and (max-width:425px) {
     .header__search {
         display: none;
